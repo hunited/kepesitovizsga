@@ -10,7 +10,7 @@ public class Phonebook {
 
     public void exportPhonebook(Map<String, String> contacts, String output) {
         if (output == null || output.isEmpty() || contacts == null) {
-            throw new IllegalArgumentException("Wrong Output");
+            throw new IllegalArgumentException("Something was wrong");
         }
         try (BufferedWriter writer = Files.newBufferedWriter(Path.of(output))) {
             writeFile(contacts, writer);
