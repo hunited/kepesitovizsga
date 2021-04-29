@@ -30,5 +30,4 @@ public class Army {
         return military.size();
     }
 
-
 }
