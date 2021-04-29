@@ -16,6 +16,14 @@ public abstract class MilitaryUnit {
         return hitPoints;
     }
 
+    public int getDamage() {
+        return damage;
+    }
+
+    public boolean isArmory() {
+        return armory;
+    }
+
     public abstract int doDamage();
 
     public abstract void sufferDamage(int damage);
