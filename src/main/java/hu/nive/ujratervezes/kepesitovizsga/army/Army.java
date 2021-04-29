@@ -12,12 +12,10 @@ public class Army {
     }
 
     public void damageAll(int damage) {
-        System.out.println(military.size());
         for (MilitaryUnit militaryUnit : military) {
             militaryUnit.sufferDamage(damage);
-            System.out.println(militaryUnit.getHitPoints());
         }
-        military.removeIf(militaryUnit -> militaryUnit.getHitPoints() > 25);
+        military.removeIf(militaryUnit -> militaryUnit.getHitPoints() < 25);
     }
 
     public int getArmyDamage() {
